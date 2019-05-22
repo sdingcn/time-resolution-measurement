@@ -10,4 +10,4 @@ When you run this program, it tries to obtain an upper bound of the **time resol
 
 The **measurement resolution** is the minimal nanosecond interval that can be "measured". Since each "measure" needs to run a piece of code, it also takes some time. This time is the "smallest" period of time that this program can measure.
 
-You may wonder why I can measure the **measurement resolution**, since sometimes it is smaller than the time resolution on the operating system. My solution is to repeat the measurement computation `1000000` times. If it uses `T` nanoseconds to complete this, the **measurement resolution** will be `T / 1000000`. However, this method cannot be used to measure the **time resolution**.
+You may wonder why I can measure the **measurement resolution**, since sometimes it is smaller than the time resolution on the operating system. My solution is to repeat the measurement computation `1000000` times. If it uses `T` nanoseconds to complete this, the **measurement resolution** will be `T / 1000000`. The detailed method to measure the **time resolution** is present in the code clearly.
